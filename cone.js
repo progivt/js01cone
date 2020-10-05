@@ -8,7 +8,7 @@ function solve() {
 	let d2 = Number(document.getElementById("d2").value);
 	let h = Number(document.getElementById("h").value);
 	if (typeof(d1) === "number" && typeof(d2) === "number" && typeof(h) === "number" // проверяем, что введены числа
-	&& d1*1000000000000 > 0 && d2*1000000000000 > 0 && h*1000000000000 > 0) { // костылём проверяем, что числа положительные и != 0
+	&& d1 > 0 && d2 > 0 && h > 0) { // костылём проверяем, что числа положительные и != 0
 		// пытаемся найти объем усеченного конуса функцией для обычного
 		let v1 = 0;
 		let v2 = 0;
