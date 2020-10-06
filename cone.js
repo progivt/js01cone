@@ -19,10 +19,10 @@ function solve() {
 			v2 = coneVolume(d1, h2); // x2
 		}
 		else {
-			v2 = Math.PI * ((d1/2)**2) * h; // если равны, ищем объем цилиндра
+			v2 = Math.PI * ((d1/2.0)**2.0) * h; // если равны, ищем объем цилиндра
 		}
 		alert("Объем конуса: " + (v2 - v1)/1000.0 + " л");
-		//alert("Проверка: " + testVolume(d1, d2, h));
+		//alert("Проверка: " + testVolume(d1, d2, h)/1000.0);
 	}
 	else {
 		alert("Недопустимые данные!");
@@ -31,10 +31,10 @@ function solve() {
 
 function coneVolume(d, h){
 	// вычисление объема полного конуса
-	return ((1/3) * Math.PI * ((d/2)**2) * h);
+	return ((1.0/3.0) * Math.PI * ((d/2.0)**2.0) * h);
 }
 
 /*
 function testVolume(d1, d2, h) {
-	return ((1/3) * Math.PI * h * ((d1/2)**2 + (d1/2)*(d2/2) + (d2/2)**2));
+	return ((1.0/3.0) * Math.PI * h * ((d1/2.0)**2.0 + (d1/2.0)*(d2/2.0) + (d2/2.0)**2.0));
 }*/
