@@ -14,7 +14,7 @@ function solve() {
 		let v2 = 0;
 		if (Math.abs(d1 - d2) > 0.000000000001) { // проверяем, что диаметры не равны
 			let k = (d1 / 2.0) / ((d1 - d2) / 2.0); // коэф. подобия
-			let h2 = h * k; // высота отсекаемой части конуса
+			let h2 = h * k; // высота полного конуса с таким же основанием
 			v1 = coneVolume(d2, h2 - h); // натягиваем сову на глобус
 			v2 = coneVolume(d1, h2); // x2
 		}
@@ -29,7 +29,7 @@ function solve() {
 	}
 }
 
-function coneVolume(d, h){
+function coneVolume(d, h) {
 	// вычисление объема полного конуса
 	return ((1.0/3.0) * Math.PI * ((d/2.0)**2.0) * h);
 }
